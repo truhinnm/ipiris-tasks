@@ -24,6 +24,7 @@ users:
   - name: $USER
     ssh-authorized-keys:
       - $(cat ${SSH_KEY_NAME}.pub)
+    groups: sudo
     sudo: ["ALL=(ALL) NOPASSWD:ALL"]
     shell: /bin/bash
 EOF
